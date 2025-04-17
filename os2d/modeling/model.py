@@ -303,7 +303,7 @@ class Os2dModel(nn.Module):
         try:
             if path:
                 self.logger.info("Reading model file {}".format(path))
-                checkpoint = torch.load(path)
+                checkpoint = torch.load(path, weights_only=False)
             else:
                 checkpoint = None
 
@@ -322,7 +322,7 @@ class Os2dModel(nn.Module):
 
         except (KeyboardInterrupt, SystemExit):
             raise
-        except:
+        except Exception as e:
             self.logger.info("Failed to load the full model, trying to init feature extractors")
             self._load_network(self.net_label_features.net_class_features, path=path)
             if not self.merge_branch_parameters:
