@@ -24,8 +24,8 @@ If you use our ideas, code or data, please, cite our paper ([available on arXiv]
 This software is released under the [MIT license](./LICENSE), which means that you can use the code in any way you want.
 
 ## Requirements
-1. python >= 3.7
-2. pytorch >= 1.4, torchvision >=0.5
+1. python >= 3.12
+2. pytorch >= 2.6, torchvision >=0.5
 3. NVIDIA GPU, tested with V100 and GTX 1080 Ti
 4. Installed CUDA, tested with v10.0
 
